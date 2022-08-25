@@ -13,7 +13,7 @@ const ListaRodape = (props: ListaRodapeProps) => {
         return (
             <>
                 <span className='text-gray-300 hidden lg:inline'>
-                    {tarefas.quantidade}
+                    {tarefas.quantidade === 0 ? '' : tarefas.quantidade}
                     {tarefas.quantidade === 0 ? ' Nenhuma Tarefa Encontrada' :
                         tarefas.quantidade === 1 ? ' Tarefa Encontrada' : ' Tarefas Encontradas'}
                 </span>
@@ -29,7 +29,7 @@ const ListaRodape = (props: ListaRodapeProps) => {
                     onClick={() => mudou(tarefas.removerFiltro())}
                     className="hidden md:inline"
                 >
-                    todas
+                    Todas
                 </ListaBotao>
                 <ListaBotao
                     selecionado={tarefas.exibindoSomenteAtivas()}

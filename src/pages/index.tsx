@@ -1,14 +1,19 @@
-import Selecao from "../components/lista/Selecao";
+import { useState } from "react";
+import Lista from "../components/lista/Lista";
+import tarefasIniciais from '../data/mock';
+import ListaTarefas from "../model/ListaTarefas";
 
 export default function Home() {
 
+  const [tarefas, setTarefas] = useState<ListaTarefas>(tarefasIniciais)
+
   return (
-    <div className='flex flex-col 
-    items-center justify-center h-screen
-     text-white bg-gradient-to-tr
-      from-purple-500 to-yellow-600' >
-        <Selecao valor={true}/>
-        <Selecao valor={false}/>
+    <div className='flex flex-col items-center justify-center h-screen bg-gray-300
+    
+    ' >
+
+      <Lista tarefas={tarefas} mudou={(novasTarefas) => {setTarefas(novasTarefas)}} />
+
     </div >
   )
 }

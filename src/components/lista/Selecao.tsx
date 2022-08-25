@@ -14,7 +14,7 @@ export default function Selecao(props: SelecaoProps) {
           cursor-pointer
           h-7
           w-7
-          bg-red-600
+          text-white
           border
           border-gray-400
           ${gradiente}

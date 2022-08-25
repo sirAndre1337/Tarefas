@@ -1,4 +1,5 @@
 import ListaTarefas from "../../model/ListaTarefas"
+import ListaBotao from "./ListaBotao";
 import ListaItem from "./ListaItem";
 
 interface ListaProps {
@@ -33,6 +34,14 @@ export default function Lista(props: ListaProps) {
             w-full list-none bg-white shadow-lg rounded-lg
             `}>
             {renderizarTarefas()}
+            <li className="p-5">
+                <ListaBotao 
+                selecionado={false}
+                onClick={() => { }}
+                >
+                    todas
+                     </ListaBotao>
+            </li>
             </ul>
         </div>
     )

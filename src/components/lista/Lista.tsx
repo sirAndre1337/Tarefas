@@ -28,12 +28,8 @@ export default function Lista(props: ListaProps) {
         })
     }
     return (
-        <div className={`
-         flex w-3/5
-        `}>
-            <ul className={`
-            w-full list-none bg-white shadow-lg rounded-lg
-            `}>
+        <div className={`flex w-3/5 items-start relative`}>
+            <ul className={`absolute -top-14 w-full list-none bg-white shadow-lg rounded-lg`}>
                 {renderizarTarefas()}
                 <ListaRodape
                     tarefas={tarefas}
